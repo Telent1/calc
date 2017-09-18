@@ -1,14 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
   <title>Document</title>
-  <link rel="stylesheet" type="text/css" href="index.css">  
+  <link rel="stylesheet" type="text/css" href="index.css">
   <script type="text/javascript" src="index.js"></script>
 </head>
+
 <body>
-  
+  <section class="section-content">
+    <div class="calc-content">
+      <div class="title-box">
+        <span>网页计算器</span>
+      </div>
+      <div class="result-box">
+        <p id="calcInput">0</p>
+        <span id="result">0</span>
+      </div>
+      <div class="table-content">
+        <table class="table-box" border="2" border-spacing="2">
+          <tr>
+            <td style="width: 25%;" onclick="functionClick('ac')">AC</td>
+            <td style="width: 25%;" onclick="functionClick('/')">/</td>
+            <td style="width: 25%;" onclick="functionClick('*')">*</td>
+            <td style="width: 25%;" onclick="functionClick('-')">-</td>
+          </tr>
+          <tr>
+            <td onclick="functionClick('7')">7</td>
+            <td onclick="functionClick('8')">8</td>
+            <td onclick="functionClick('9')">9</td>
+            <td rowspan="2" onclick="functionClick('+')">+</td>
+          </tr>
+          <tr>
+            <td onclick="functionClick('4')">4</td>
+            <td onclick="functionClick('5')">5</td>
+            <td onclick="functionClick('6')">6</td>
+          </tr>
+          <tr>
+            <td onclick="functionClick('1')">1</td>
+            <td onclick="functionClick('2')">2</td>
+            <td onclick="functionClick('3')">3</td>
+            <td rowspan="2" onclick="functionClick('=')">=</td>
+          </tr>
+          <td colspan="2" onclick="functionClick('0')">0</td>
+          <td onclick="functionClick('.')">.</td>
+        </table>
+      </div>
+    </div>
+  </section>
 </body>
+
 </html>
