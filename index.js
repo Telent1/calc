@@ -1,3 +1,14 @@
+window.addEventListener('keypress',function(event) {
+  console.log(event)
+  if (event.keyCode >= 48 && event.keyCode <= 57) {
+    functionClick(event.key.toString())
+  } else if (event.keyCode == 47 || event.keyCode == 42 || event.keyCode == 45 || event.keyCode == 43 || event.keyCode == 46) {
+    functionClick(event.key.toString())
+  } else if(event.keyCode == 13) {
+    functionClick('=')
+  }
+})
+
 var input = ''
 var previousInput = ''
 function functionClick(params) {
