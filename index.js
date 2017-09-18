@@ -12,14 +12,14 @@ window.addEventListener('keypress',function(event) {
 var input = ''
 var previousInput = ''
 function functionClick(params) {
-  console.log('params', params)
+  // console.log('params', params)
   var calcInput = document.getElementById('calcInput').innerHTML
   var result = document.getElementById('result').innerHTML
-  if ((params == '/' || params == '*' || params == '-' || params == '+')) {
+  if ((params == '/' || params == '*' || params == '-' || params == '+') && (calcInput.indexOf('/') != -1 || calcInput.indexOf('*') != -1 ||calcInput.indexOf('-') != -1 || calcInput.indexOf('+') != -1)) {
     if (previousInput != '/' && previousInput != '*' && previousInput != '-' && previousInput != '+') {
       calc()
       function calc() {
-        console.log('calc')
+        // console.log('calc')
         if (calcInput.indexOf('/') != -1) {
           let arr = calcInput.split('/')
           if (Number(arr[1]) == 0) {
@@ -40,15 +40,17 @@ function functionClick(params) {
         result = result.toString()
         result = result.substring(0, 9)
         document.getElementById('result').innerHTML = result
+        document.getElementById('calcInput').innerHTML = result + params
         calcInput = document.getElementById('calcInput').innerHTML
         result = document.getElementById('result').innerHTML
       }
     } else {
       let len = calcInput.length
-      console.log('len', len)
+      // console.log('len', len)
       calcInput = calcInput.substring(0, len)
       document.getElementById('calcInput').innerHTML = calcInput + params
     }
+    return
   }
   switch (params) {
     case 'ac':
@@ -148,7 +150,7 @@ function functionClick(params) {
         // document.getElementById('calcInput').innerHTML = result
       break;
       case '.':
-      console.log('.')
+      // console.log('.')
       if (previousInput) {
         if (previousInput != '/' && previousInput != '*' && previousInput != '-' && previousInput != '+') {
           document.getElementById('calcInput').innerHTML = calcInput + '.'
@@ -180,5 +182,5 @@ function functionClick(params) {
   if (params != 'ac') {
     previousInput = params
   }
-  console.log('pre', previousInput)
+  // console.log('pre', previousInput)
 }
