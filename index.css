@@ -36,10 +36,10 @@ body,html{
   font-size: 30px;
   color: #fff;
   letter-spacing: 3px;
-  margin: 5px 0px;
+  margin: 0px 0px;
 }
 .result-box span {
-  font-size: 80px;
+  font-size: 60px;
   letter-spacing: 8px;
   color: #fff;
 }
