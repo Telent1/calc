@@ -41,7 +41,7 @@ body,html{
 .result-box span {
   font-size: 60px;
   letter-spacing: 8px;
-  color: #fff;
+  color: #ffe;
 }
 .table-content{
   height: calc(80% - 6px - 25px);
